@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f5f5f5;
+      color: #000000;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #016dd8;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* Main container */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Cart table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    table th, table td {
+      padding: 1rem;
+      text-align: left;
+    }
+    table th {
+      background-color: #ecf0f1;
+    }
+    table tr:not(:last-child) {
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Product image */
+    .product-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 3rem;
+    }
+
+    /* Button */
+    .btn {
+      background-color: #3498db;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      table th, table td {
+        padding: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">MyShop</div>
+    <ul>
+      <li>Home</li>
+      <li>Products</li>
+      <li>Cart</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+
+  <!-- Main container -->
+  <div class="container">
+    <h1>Your Cart</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="https://via.placeholder.com/80" alt="Product" class="product-img"></td>
+          <td>Sample Product</td>
+          <td>$29.99</td>
+          <td>1</td>
+          <td>$29.99</td>
+        </tr>
+        <tr>
+          <td><img src="https://via.placeholder.com/80" alt="Product" class="product-img"></td>
+          <td>Another Product</td>
+          <td>$49.99</td>
+          <td>2</td>
+          <td>$99.98</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top: 1rem; text-align: right;">
+      <strong>Total: $129.97</strong>
+      <button class="btn">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 MyShop. All rights reserved. | Designed professionally
+  </footer>
+
+</body>
+</html>
